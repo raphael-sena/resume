@@ -1,0 +1,220 @@
+%-------------------------
+% Resume in LateX
+% Author : Raphael Sena
+% Based off of: Sourabh Bajaj https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://raphaelsena.com/}{\Large Raphael Sena}} & Email: \href{mailto:rsenares1@gmail.com}{rsenares1@gmail.com}\\
+  \href{https://raphaelsena.com/}{raphaelsena.com} & Mobile: \href{tel:+5531997167755}{+55 31 9 9716-7755} \\
+\end{tabular*}
+
+\section{Summary}
+    {Raphael Sena is a software developer who has evolved from hands-on IT support to building and modernizing real-world mobility and ERP systems. After early international experience studying in Sydney, he started his career in Service Desk/Help Desk roles, developing a strong foundation in troubleshooting, networks, hardware, and enterprise support. That customer-facing technical base later led to software engineering. Today, he works as a Fullstack Engineer at Modaxo (Empresa 1) on large-scale electronic ticketing and transit revenue platforms—shipping mobile apps used across multiple Brazilian cities and contributing to modernization efforts with Flutter and Java/Spring. Alongside professional work, he builds personal projects, combining product mindset with fullstack execution across mobile, backend, frontend, and cloud/devops. He is also a Software Engineering student at PUC Minas (2023–2027), continuously strengthening his engineering fundamentals while applying them in production environments and side projects with \textbf{Java}, \textbf{Angular}, \textbf{PostgreSQL} and \textbf{Docker}}.
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Modaxo - Empresa 1}{Belo Horizonte, MG - Brazil}
+      {Software Engineer}{May 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Project Sigom Cloud}
+          {Sigom Cloud is an ERP/Transit Revenue Management, available in SaaS style. Worked as a Fullstack developer operating with \textbf{Java} 1.8, \textbf{Spring Boot}, and \textbf{AngularJS}. Optimized PIX payment report generation by redesigning the algorithm and reducing execution paths \textbf{by 42.6\%}; for 1M records, reduced estimated work from \textbf{20M–1T to 1M} operations.}
+        \resumeItem{Project SIGO}
+          {SIGO is a mobile app for electronic ticketing for public transport across small and large metropolitan cities around Brazil, such as Guarulhos, SP; Florianópolis, SC; Uberlândia, MG and many others. Worked as a Fullstack developer dealing with the technologies \textbf{C\#} with \textbf{Xamarin} for the mobile app and \textbf{Java} 1.7 and \textbf{Spring Boot} 1.5. The app is available on Apple App Store and Android Google Play and it \textbf{reached} out over \textbf{177K people}.}
+        \resumeItem{Project SIGO 2.0}
+          {SIGO 2.0 is a modernization of SIGO. Worked as a Fullstack developer using the technologies \textbf{Dart} with \textbf{Flutter} kit for the mobile app and \textbf{Java} 1.7 and \textbf{Spring Boot} 1.5. Worked on the following functionalities: Card Statement, FAQ, Alerts, User Registering, Pofile Editing, Orders and My Cards section.}
+      \resumeItemListEnd
+
+%-------------------------------------------
+
+   \resumeSubheading
+      {AVASO Technology Solutions}{Belo Horizonte, Minas Gerais}
+      {Field Support Engineer}{Sep 2023 -- Present}
+    \resumeItemListStart
+      \resumeItem{Service Desk (Freelance)}{
+          Provide English-language support for a multicultural user base. Diagnosed, researched, and resolved issues across desktops, laptops, VMs, smartphones, servers, backup systems, VoIP devices, and peripherals. Installed and configured devices and updated documents in a ticketing system for tracking and reporting.
+        }
+    \resumeItemListEnd
+
+%-------------------------------------------
+
+    \resumeSubheading
+      {Sociedade Mineira de Cultura}{Belo Horizonte, Minas Gerais}
+      {IT Technician}{Sep 2021 -- Sep 2023}
+      \resumeItemListStart
+        \resumeItem{ServiceDesk and HelpDesk}{I configured and verified networks on desktops and laptops. Verified and installed hardware. Performed maintenance on computers and laptops. Provided L1 technical support using Active Directory, ticketing systems (CSC), VPN, directory and printer mapping platforms, following established SLA standards. Collaborated on a telephony change project serving over 100 users, migrating logical telephony networks to VOIP and configuring/installing devices.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+  
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Pontifical Catholic University of Minas Gerais}{Belo Horizonte, MG - Brazil}
+      {Bachelor of Software Engineering}{Jul 2023 -- Jul 2027}
+        \resumeItemListStart
+            \resumeItem{Interdisciplinary Project Champion}{Led an award-winning team in high-impact, real-world software project.}
+            \resumeItem{Experimental Software Agency - PMMG}{As a \textbf{Tech Lead}, I am leading a team to build the human-resources selection process software scope for Minas Gerais State Military Police, impacting more than \textbf{40000 candidates} per public tender.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Kogarah High School}{Sydney, NSW - Australia}
+      {High School}{Jul 2017 -- Dec 2017}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://raphaelsena.com}{raphaelsena.com}}
+      {Personal portfolio showcasing myself.}
+      \resumeSubSubheading{Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://raphaelsena.com}{\faLink}}
+      {\href{https://github.com/raphael-sena/portfolio}{\faGithub}}}
+      
+    \resumeSubItem{\href{https://ongremediar.com.br/}{Remediar}}
+      {ERP award-winning platform developed for ONG Remediar, an NGO for medicine charity.}
+      \resumeSubSubheading{Java, Spring Boot, PostgreSQL, Docker, Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://ongremediar.com.br/}{\faLink}}
+      {\href{https://github.com/raphael-sena/remediar}{\faGithub}}}
+      
+    \resumeSubItem{DressManager}
+      {Web app for a dress store management.}
+      \resumeSubSubheading{Java, Spring Boot, PostgreSQL, Docker, Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://github.com/raphael-sena/dress-manager}{\faGithub}}}
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Programming Languages}
+        {Java, Typescript, C\#, Node.js, Dart, SQL}
+    \resumeSubItem{Frontend}
+        {HTML, CSS, React, Next.js, Angular, TailwindCSS}
+    \resumeSubItem{Mobile \& Cross-platform}
+        {Flutter, Xamarin}
+    \resumeSubItem{Backend \& Frameworks}
+        {Spring Boot, Node.js}
+    \resumeSubItem{Databases}
+        {Oracle, PostgreSQL, MySQL, SQLite}
+    \resumeSubItem{DevOps \& Cloud}
+        {Docker, Cloudflare, Linux, Github Actions}
+    \resumeSubItem{Observability}
+        {Zipkin, Grafana and Prometheus}
+    \resumeSubItem{Messaging \& Caching}
+        {RabbitMQ, Redis}
+    
+ \resumeSubHeadingListEnd
+
+ %-----------LANGUAGES-----------------
+\section{Languages}
+    \resumeSubHeadingListStart
+      \item{
+        \textbf{English} (C1) \textbar{}
+        \textbf{German} (B1) \textbar{}
+        \textbf{Spanish} (A2) \textbar{}
+        \textbf{Portuguese} (Native)
+      }
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

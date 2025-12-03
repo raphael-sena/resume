@@ -1,0 +1,220 @@
+%-------------------------
+% Currículo em LaTeX
+% Autor : Raphael Sena
+% Baseado em: Sourabh Bajaj https://github.com/sb2nov/resume
+% Licença : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[portuguese]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Limpa todos os campos de cabeçalho e rodapé
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Ajuste de margens
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatação das seções
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Garante que o PDF gerado seja legível por máquina/compatível com ATS
+\pdfgentounicode=1
+
+%-------------------------
+% Comandos personalizados
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Para um cabeçalho que não precisa estar em uma lista
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV COMEÇA AQUI  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------CABEÇALHO-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://raphaelsena.com/}{\Large Raphael Sena}} & Email: \href{mailto:rsenares1@gmail.com}{rsenares1@gmail.com}\\
+  \href{https://raphaelsena.com/}{raphaelsena.com} & Celular: \href{tel:+5531997167755}{+55 31 9 9716-7755} \\
+\end{tabular*}
+
+\section{Resumo}
+    {Raphael Sena é um desenvolvedor de software que evoluiu do suporte de TI na prática para a construção e modernização de sistemas reais de mobilidade e ERP. Após uma experiência internacional inicial estudando em Sydney, iniciou sua carreira em funções de Service Desk/Help Desk, desenvolvendo uma base em troubleshooting, redes, hardware e suporte corporativo. Essa vivência técnica voltada ao cliente posteriormente o levou à engenharia de software. Hoje, atua como Engenheiro Fullstack na Modaxo (Empresa 1) em plataformas de bilhetagem eletrônica e gestão de receita do transporte em larga escala — entregando aplicativos móveis utilizados em diversas cidades brasileiras e contribuindo para esforços de modernização com Flutter e Java/Spring. Paralelamente ao trabalho profissional, desenvolve projetos pessoais, combinando mentalidade de produto com execução fullstack em mobile, backend, frontend e cloud/devops. Também é estudante de Engenharia de Software na PUC Minas (2023–2027), fortalecendo continuamente seus fundamentos de engenharia enquanto aplica esse conhecimento em ambientes de produção e projetos paralelos com \textbf{Java}, \textbf{Angular}, \textbf{PostgreSQL} e \textbf{Docker}}.
+
+
+%-----------EXPERIÊNCIA-----------------
+\section{Experiência}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Modaxo - Empresa 1}{Belo Horizonte, MG - Brasil}
+      {Engenheiro de Software}{Mai 2025 -- Atual}
+      \resumeItemListStart
+        \resumeItem{Projeto Sigom Cloud}
+          {Sigom Cloud é um ERP/Sistema de Gestão de Receita do Transporte, oferecido no modelo SaaS. Atuei como desenvolvedor Fullstack com \textbf{Java} 1.8, \textbf{Spring Boot} e \textbf{AngularJS}. Otimizei a geração de relatórios de pagamento via PIX ao redesenhar o algoritmo e reduzir os caminhos de execução em \textbf{42,6\%}; para 1M de registros, reduzi o esforço estimado de \textbf{20M–1T para 1M} operações.}
+        \resumeItem{Projeto SIGO}
+          {SIGO é um aplicativo móvel de bilhetagem eletrônica para transporte público em cidades pequenas e grandes regiões metropolitanas do Brasil, como Guarulhos, SP; Florianópolis, SC; Uberlândia, MG e muitas outras. Atuei como desenvolvedor Fullstack utilizando \textbf{C\#} com \textbf{Xamarin} no app mobile e \textbf{Java} 1.7 com \textbf{Spring Boot} 1.5. O app está disponível na Apple App Store e na Google Play e \textbf{alcançou} mais de \textbf{177 mil pessoas}.}
+        \resumeItem{Projeto SIGO 2.0}
+          {SIGO 2.0 é a modernização do SIGO. Atuei como desenvolvedor Fullstack utilizando \textbf{Dart} com \textbf{Flutter} no app mobile e \textbf{Java} 1.7 com \textbf{Spring Boot} 1.5. Trabalhei nas seguintes funcionalidades: Extrato do Cartão, FAQ, Alertas, Cadastro de Usuário, Edição de Perfil, Pedidos e seção Meus Cartões.}
+      \resumeItemListEnd
+
+%-------------------------------------------
+
+   \resumeSubheading
+      {AVASO Technology Solutions}{Belo Horizonte, Minas Gerais}
+      {Field Support Engineer}{Set 2023 -- Atual}
+    \resumeItemListStart
+      \resumeItem{Service Desk (Freelance)}{
+          Presto suporte em inglês para uma base de usuários multicultural. Diagnostiquei, pesquisei e resolvi problemas em desktops, notebooks, VMs, smartphones, servidores, sistemas de backup, dispositivos VoIP e periféricos. Realizei instalação e configuração de equipamentos e atualizei documentações em sistema de chamados para rastreio e relatórios.
+        }
+    \resumeItemListEnd
+
+%-------------------------------------------
+
+    \resumeSubheading
+      {Sociedade Mineira de Cultura}{Belo Horizonte, Minas Gerais}
+      {Técnico de TI}{Set 2021 -- Set 2023}
+      \resumeItemListStart
+        \resumeItem{Service Desk e Help Desk}{Configurei e verifiquei redes em desktops e notebooks. Verifiquei e instalei hardware. Realizei manutenção em computadores e notebooks. Prestei suporte técnico N1 utilizando Active Directory, sistema de chamados (CSC), VPN, plataformas de mapeamento de diretórios e impressoras, seguindo padrões de SLA estabelecidos. Colaborei em um projeto de mudança de telefonia para mais de 100 usuários, migrando redes lógicas de telefonia para VoIP e configurando/instalando equipamentos.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+  
+%-----------FORMAÇÃO-----------------
+\section{Formação}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Pontifícia Universidade Católica de Minas Gerais}{Belo Horizonte, MG - Brasil}
+      {Bacharelado em Engenharia de Software}{Jul 2023 -- Jul 2027}
+        \resumeItemListStart
+            \resumeItem{Campeão de Projeto Interdisciplinar}{Liderei uma equipe premiada em um projeto de software de alto impacto e aplicação no mundo real.}
+            \resumeItem{Agência Experimental de Software - PMMG}{Como \textbf{Tech Lead}, lidero uma equipe para construir o escopo do software de processo seletivo de recursos humanos da Polícia Militar de Minas Gerais, impactando mais de \textbf{40.000 candidatos} por concurso público.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Kogarah High School}{Sydney, NSW - Austrália}
+      {Ensino Médio}{Jul 2017 -- Dez 2017}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJETOS-----------------
+\section{Projetos}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://raphaelsena.com}{raphaelsena.com}}
+      {Portfólio pessoal me apresentando e destacando meus trabalhos.}
+      \resumeSubSubheading{Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://raphaelsena.com}{\faLink}}
+      {\href{https://github.com/raphael-sena/portfolio}{\faGithub}}}
+      
+    \resumeSubItem{\href{https://ongremediar.com.br/}{Remediar}}
+      {Plataforma ERP premiada desenvolvida para a ONG Remediar, uma organização de caridade voltada à doação de medicamentos.}
+      \resumeSubSubheading{Java, Spring Boot, PostgreSQL, Docker, Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://ongremediar.com.br/}{\faLink}}
+      {\href{https://github.com/raphael-sena/remediar}{\faGithub}}}
+      
+    \resumeSubItem{DressManager}
+      {Aplicação web para gestão de uma loja de vestidos.}
+      \resumeSubSubheading{Java, Spring Boot, PostgreSQL, Docker, Typescript, Next.js, React, TailwindCSS}{\hfill
+      {\href{https://github.com/raphael-sena/dress-manager}{\faGithub}}}
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------COMPETÊNCIAS-----------------
+\section{Competências}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Linguagens de Programação}
+        {Java, Typescript, C\#, Node.js, Dart, SQL}
+    \resumeSubItem{Frontend}
+        {HTML, CSS, React, Next.js, Angular, TailwindCSS}
+    \resumeSubItem{Mobile \& Cross-platform}
+        {Flutter, Xamarin}
+    \resumeSubItem{Backend \& Frameworks}
+        {Spring Boot, Node.js}
+    \resumeSubItem{Bancos de Dados}
+        {Oracle, PostgreSQL, MySQL, SQLite}
+    \resumeSubItem{DevOps \& Cloud}
+        {Docker, Cloudflare, Linux, Github Actions}
+    \resumeSubItem{Observabilidade}
+        {Zipkin, Grafana e Prometheus}
+    \resumeSubItem{Mensageria \& Cache}
+        {RabbitMQ, Redis}
+    
+ \resumeSubHeadingListEnd
+
+ %-----------IDIOMAS-----------------
+\section{Idiomas}
+    \resumeSubHeadingListStart
+      \item{
+        \textbf{Inglês} (C1) \textbar{}
+        \textbf{Alemão} (B1) \textbar{}
+        \textbf{Espanhol} (A2) \textbar{}
+        \textbf{Português} (Nativo)
+      }
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
